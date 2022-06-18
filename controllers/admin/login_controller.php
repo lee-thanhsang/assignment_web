@@ -18,11 +18,14 @@ class LoginController extends BaseController
 	{
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		
 		$check = Admin::validation($username, $password);
 		if ($check == 1) {
 			session_start();
+			$_SESSION["init"] = Admin::getInit($username);
 			if (!isset($_SESSION["user"]))
 				$_SESSION["user"] = $username;
+			
 			header("Location: index.php?page=admin&controller=layouts&action=index");
 		} else {
 			$err = "Sai tài khoản hoặc mật khẩu";

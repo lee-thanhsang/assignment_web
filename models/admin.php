@@ -23,6 +23,14 @@ class Admin
         return $req;
     }
 
+    static function getInit($username){
+        $db = DB::getInstance();
+        $req = $db->query("SELECT init FROM admin WHERE username = '$username'");
+        $result = $req->fetch_assoc();
+        return $result['init'];
+    }
+
+
     static function delete($username)
     {
         $db = DB::getInstance();

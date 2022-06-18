@@ -40,12 +40,19 @@ require_once('views/admin/content_layouts.php'); ?>
 				<div class="row invoice-info">
 					<div class="col-sm-6 invoice-col">
 						<ul style="list-style: none;">
-							<li>
-								<a href="index.php?page=admin&controller=admin&action=index">
-									<i class="fas fa-user-graduate"></i>
-									Danh sách Admin
-								</a>
-							</li>
+							<?php
+								if($_SESSION['init'] == 1){
+									echo '
+									<li>
+										<a href="index.php?page=admin&controller=admin&action=index">
+											<i class="fas fa-user-graduate"></i>
+											Danh sách Admin
+										</a>
+									</li>
+									
+									';
+								}
+							?>
 							
 							<li>
 								<a href="index.php?page=admin&controller=admin&action=index">
