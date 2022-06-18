@@ -78,7 +78,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="margin-top: 5%;">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Tuổi</label>
@@ -106,15 +106,16 @@
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 5%;">
               <label>Số điện thoại</label>
               <input class="form-control" type="number" placeholder="Số điện thoại" name="phone" value="' . $data->phone . '"/>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 5%;">
               <label>Hình ảnh hiện tại </label>
-              <input class="form-control" type="text" name="img" readonly value="' . $data->profile_photo . '" />
+              <img style="width: 90%; height: auto; margin-top: 5%; margin-bottom: 5%" src="' . $data->profile_photo . '">
+              <input style="margin-top: 5%;"class="form-control" type="text" name="img" readonly value="' . $data->profile_photo . '" />
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 5%;">
               <label>Hình ảnh mới</label>&nbsp
               <input type="file" name="fileToUpload" id="fileToUpload" />
             </div>

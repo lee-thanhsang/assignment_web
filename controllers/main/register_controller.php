@@ -25,7 +25,7 @@ class RegisterController extends BaseController
 		$password = $_POST['pass'];
 		echo $fname . $lname . $age . $gender . $phone . $email . $password;
 		User::insert($email, 'public/img/user/default.png', $fname, $lname, $gender, $age, $phone, $password);
-		header('Location: index.php?page=main&controller=layouts&action=index');
+		header('Location: index.php?page=main&controller=login&action=index');
 	}
 
 	public function editInfo()

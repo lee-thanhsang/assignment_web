@@ -84,6 +84,7 @@
                               <div id="comment-' . $comment->id . '-reply-' . $reply->id . '" class="comment comment-reply">
                                 <div class="d-flex">
                                   <div>
+                                    <h5><a href="">' . $reply->user_name . '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                                     <time>' . date("F j, Y, g:i a", strtotime($reply->date)) . '</time>
                                     <p>
                                     ' . $reply->content . '
@@ -103,7 +104,7 @@
                                   <textarea name="comment" class="form-control" placeholder="Viết bình luận tại đây"></textarea>
                                 </div>
                               </div>
-                              <button style="background-color: #0d6efd; color: white;" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
+                              <button style="background-color: green; color: white;" class="btn btn-primary btn-reply" data-news=' . $news->id . ' data-parent=' . $comment->id .' data-user="' . @$_SESSION["guest"] . '">Gửi bình luận</button>
                             </form>
                           </div></div>';
                           }
